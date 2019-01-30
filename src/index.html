@@ -6,9 +6,44 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div id="root">
-      <h1>Código Cesar</h1>
-    </div>
+      <div id="inicio">
+        <h1>Love Secrets!</h1>
+        <h2>Instrucciones:</h2>
+          <p>En esta página podrás escribir y descifrar mensajes para tu pareja.</p>
+          <p>Escoge, ¿que quieres hacer?</p>
+        <button type="button" id="botonDescifrar" onclick="pagDescifrar()">Descifrar Mensaje</button>
+        <button type="button" id="botonCifrar" onclick="pagCifrar()">Escribir Mensaje</button>
+      </div>
+    
+      <div id="pag2" style="display:none">
+        <h1>Escribe el mensaje que quieres descifrar </h1>
+          <h2>(SOLO MAYUSCULAS POR AHORA): </h2>  
+        <form> 
+          <p>
+          <input type="text" id="mensajeAdescifrar" value=""> 
+        <h1>Escribe el no. de seguridad del mensaje (SOLO NUMEROS): </h1>
+          <input type="text" id="noDesplazamientos" value="">
+          <button type="button" id="descifrar">ENTER ▶</button>
+          <button type="button" id="volver" onclick="incio2()">VOLVER AL INICIO</button>
+          </p>
+          <p> <span id="write"></span> </p>
+          </form> 
+        </div>
+    
+      <div id="pag3" style="display:none" >
+        <h1>Escribe el mensaje que quieres cifrar </h1>
+          <h2>(SOLO MAYUSCULAS POR AHORA): </h2>  
+          <form> 
+          <p>
+            <input type="text" id="mensajeAcifrar" value=""> 
+        <h1>Escribe el no. del nivel de seguridad del mensaje (SOLO NUMEROS): </h1>
+            <input type="text" id="noDesplazamientos2" value="">
+            <button type="button" id="cifrar" >ENTER ▶</button>
+            <button type="button" id="volver2" onclick="incio2()">VOLVER AL INICIO</button>
+          </p>
+          <p> <span id="write2"></span> </p>
+         </form> 
+      </div>
     <script src="cipher.js"></script>
     <script src="index.js"></script>
   </body>
