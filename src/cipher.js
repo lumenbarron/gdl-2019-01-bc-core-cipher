@@ -1,23 +1,30 @@
 window.cipher = {
   decode : function (offset,msj) {
+    let alfabeto = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     let respuestaCesar = "";
       for (let i = 0; i < msj.length ; i++){
         if (msj[i]== " ") {
           respuestaCesar += " ";
-        }else {
-          //console.log(msj.length)
-          //console.log("si ejecuta el for", msj) //es para ver la longitud del string
-          var valorAscii =  msj.charCodeAt(i);
-          //console.log(valorAscii);
-          var nuevoValorAscii = (valorAscii - 65) - offset % 26 + 65;
-          //console.log(nuevoValorAscii);
-          var nuevaLetra = String.fromCharCode(nuevoValorAscii);
-          //console.log(nuevaLetra);
-          respuestaCesar = respuestaCesar + nuevaLetra ;
+        }else { 
+          console.log(msj.length)
+          console.log("si ejecuta el for", msj) //es para ver la longitud del string
+          var valorAscii =  msj.charCodeAt(i); //valor ascii de la letra (numero)
+          console.log(valorAscii);
+          var nuevoValorAscii = (valorAscii - 65) - offset % 26;
+          console.log(nuevoValorAscii);
+          var nuevaLetra = alfabeto[nuevoValorAscii];
+          } console.log(nuevaLetra);
+          respuestaCesar = respuestaCesar + nuevaLetra ; 
+          
+
+          
         }
-      }
+      
       return respuestaCesar;
   } ,
+
+
+
 
   encode : function (offset,msj)  {
       let respuestaCesar = "";

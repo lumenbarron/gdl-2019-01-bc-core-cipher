@@ -1,15 +1,31 @@
 body {
-    background: tomato;
+    background:tomato;
     font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
     color: white;
     font-size: 30px;
     margin: center;
     padding: center;
+    text-align: center;
   }
+
+button {
+    
+    position: center;
+    margin-top: 70px;
+    margin-left: 120px;
+    background: white;
+    color: tomato;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 20px;
+    text-align: center;
+    width: 100px;
+    transition: margin-top .1s;
+}
   
   div {
     display: inline-block;
-    border: 3px solid white;
+    border: 5px solid white;
     padding: 10px;
     border-radius: 10px;
     margin: 0 2px;
