@@ -1,20 +1,22 @@
 window.cipher = {
   decode : function (offset,msj) {
-    let alfabeto = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     let respuestaCesar = "";
       for (let i = 0; i < msj.length ; i++){
-        if (msj[i]== " ") {
-          respuestaCesar += " ";
-        }else { 
-          console.log(msj.length)
-          console.log("si ejecuta el for", msj) //es para ver la longitud del string
+        //console.log(msj.length) //es para ver la longitud del string
+          //console.log("si ejecuta el for") 
           var valorAscii =  msj.charCodeAt(i); //valor ascii de la letra (numero)
-          console.log(valorAscii);
-          var nuevoValorAscii = (valorAscii - 65) - offset % 26;
-          console.log(nuevoValorAscii);
-          var nuevaLetra = alfabeto[nuevoValorAscii];
-          } console.log(nuevaLetra);
-          respuestaCesar = respuestaCesar + nuevaLetra ; 
+         // console.log(valorAscii);
+          var nuevoValorAscii = (valorAscii - 65 - offset)  % 26 + 65;
+          //console.log(nuevoValorAscii);
+          if (nuevoValorAscii < 65) {
+              nuevoValorAscii = "Z".charCodeAt(0);
+        }else if (msj[i]== " ") { 
+          respuestaCesar += " ";
+        }  
+          
+        var nuevaLetra = String.fromCharCode(nuevoValorAscii);
+        //console.log(nuevaLetra);
+        respuestaCesar = respuestaCesar + nuevaLetra ; 
           
 
           
@@ -23,28 +25,30 @@ window.cipher = {
       return respuestaCesar;
   } ,
 
-
-
-
   encode : function (offset,msj)  {
       let respuestaCesar = "";
-    //console.log(msj.length);
-      for (var i = 0;i < msj.length;i++){ 
-        if (msj[i]== " ") {
-          respuestaCesar += " ";
-        }else {
-          //console.log("si ejecuta el for") //es para ver la longitud del string
-          var valorAscii =  msj.charCodeAt(i);
+      for (let i = 0; i < msj.length ; i++){
+        //console.log(msj.length) //es para ver la longitud del string
+          //console.log("si ejecuta el for") 
+          var valorAscii =  msj.charCodeAt(i); //valor ascii de la letra (numero)
           //console.log(valorAscii);
-          var nuevoValorAscii = (valorAscii - 65) + offset % 26 + 65;
+          var nuevoValorAscii = (valorAscii - 65 + offset)  % 26 + 65;
           //console.log(nuevoValorAscii);
-          var nuevaLetra = String.fromCharCode(nuevoValorAscii);
-          //console.log(nuevaLetra);
-          respuestaCesar = respuestaCesar + nuevaLetra ;
-        
-      }
-  } 
-  return respuestaCesar;
+          if (nuevoValorAscii > 90) {
+              nuevoValorAscii = "A".charCodeAt(0);
+        }else if (msj[i]== " ") { 
+           respuestaCesar += " ";
+        }  
+          
+        var nuevaLetra = String.fromCharCode(nuevoValorAscii);
+        //console.log(nuevaLetra);
+        respuestaCesar = respuestaCesar + nuevaLetra ; 
+          
+
+          
+        }
+      
+      return respuestaCesar;
 }
 };
 
