@@ -1,86 +1,55 @@
 body {
-    background:tomato;
+    background-image: url(Balloon-love.jpg);
+    background-size: cover; 
     font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
-    color: white;
-    font-size: 30px;
+    color: black;
+    font-size: 23px;
     margin: center;
     padding: center;
     text-align: center;
+    justify-content: center;
+    display: flex;
+    align-items: center;
   }
-
+#inicio{
+  font-size: 30px;
+}
+ 
 button {
-    
-    position: center;
-    margin-top: 70px;
-    margin-left: 120px;
-    background: white;
-    color: tomato;
+     position: center;
+     margin-left: 100px;
+    margin-right: 100px;
+    margin-bottom: 200 px;
+    background: tomato;
+    color: white;
     padding: 10px;
     border-radius: 10px;
     font-size: 20px;
     text-align: center;
     width: 100px;
     transition: margin-top .1s;
+    
 }
   
   div {
     display: inline-block;
-    border: 5px solid white;
-    padding: 10px;
+    border: 5px solid tomato;
+    padding: 10 px;
     border-radius: 10px;
-    margin: 0 2px;
+    margin: 2px;
     cursor: pointer;
     transition: all 0.2s;
-    text-align: center;
+    justify-content: center;
+    align-items: center;
+    width: 1000px;
+    height: 550px;
   }
+
   
-  strong {
-    position: absolute;
-    margin-top: -70px;
-    margin-left: -80px;
+ div:hover {
     background: white;
-    color: tomato;
-    padding: 7px;
-    border-radius: 7px;
-    font-size: 0.7em;
-    text-align: center;
-    width: 50px;
-    transition: margin-top .1s;
+    opacity: 0.6;
+    filter: alpha(opacity=60);
+    
   }
   
-  i {
-    width: 0;
-    height: 0;
-    border: 10px solid transparent;
-    border-top-color: white;
-    position: absolute;
-    margin-top: 33px;
-    margin-right: -10px;
-    right: 50%;
-  }
-  
-  .c {
-    position: absolute;
-    top: 50%;
-    margin-top: -15px;
-    text-align: center;
-    display: block;
-    width: 100%;
-    padding: 0;
-  }
-  
-  div:hover {
-    background: white;
-    color: tomato;
-  }
-  
-  div:hover > strong {
-    margin-top: -75px;
-  }
-  
-  span {
-    -moz-user-select: none;
-    -khtml-user-select: none;
-    -webkit-user-select: none;
-    -o-user-select: none; 
-  }

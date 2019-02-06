@@ -20,7 +20,7 @@ const pagCifrar =() => {
 document.getElementById("botonCifrar").addEventListener("click", pagCifrar);
 
 const decode =() => {
-  let msj = document.getElementById("mensajeAdescifrar").value;
+  let msj = document.getElementById("mensajeAdescifrar").value.toUpperCase();
   let offset = parseInt(document.getElementById("noDesplazamientos").value);
   let msjDecode = window.cipher.decode(offset,msj);
   document.getElementById("write").innerHTML = "Tu mensaje descifrado es : " + msjDecode; 
@@ -28,7 +28,7 @@ const decode =() => {
 document.getElementById("descifrar").addEventListener("click", decode);
 
 const encode =() => {
-  let msj = document.getElementById("mensajeAcifrar").value;
+  let msj = document.getElementById("mensajeAcifrar").value.toUpperCase();
   let offset = parseInt(document.getElementById("noDesplazamientos2").value);
   let msjEncode = window.cipher.encode(offset,msj);
   document.getElementById("write2").innerHTML = "Tu mensaje descifrado es : " + msjEncode; 

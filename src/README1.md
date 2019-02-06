@@ -1,2 +1,0 @@
-//explica claramente quiénes son los usuarios y su relación con el producto.
-Los usuarios son jovenes entre 12 a 18 años que buscan intimidad en el comienzo de las relaciones que hacen, la aplicación es para mantener secreta sus mensajes y conversación y que nadie mas lo pueda saber.
