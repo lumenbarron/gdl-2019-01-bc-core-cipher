@@ -28,7 +28,7 @@ button {
     text-align: center;
     width: 100px;
     transition: margin-top .1s;
-    
+    display: inline-flex;
 }
   
   div {
